@@ -59,7 +59,7 @@ const randomFunction = (limite) => {
 
 
 const Producto1 = new Contenedor ("./archivo.txt");
-Producto1.getAll();
+// // Producto1.getAll();
 
 
 const cargarProductos = async () => {
@@ -102,7 +102,7 @@ app.get("/productosRandom", (req,res)=>{
     // .then(lista => JSON.parse(lista))
     .then(listaParse => listaParse[randomFunction(listaParse.length)])
     .then(itemLista => res.json(itemLista))
-    .catch(console.error(error));
+    
 })
 
 const server = app.listen(PORT, () =>console.log (`El server esta escuchando en PUERTO ${PORT}` ));
